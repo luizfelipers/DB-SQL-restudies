@@ -1,0 +1,22 @@
+CREATE DATABASE exemplo;
+
+USE exemplo;
+
+SHOW TABLES;
+
+CREATE TABLE teste(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    idade INT
+
+);
+
+SHOW TABLES;
+
+SELECT * FROM teste;
+SHOW TABLES;
+
+DROP TABLE teste;
+
+SELECT * FROM teste;
+SHOW TABLES;
