@@ -22,7 +22,7 @@ CREATE TABLE clientes (
     telefone VARCHAR(12)
     
 );
-
+--creating order tables, with ForeignKeys for Products and Clients
 CREATE TABLE pedidos (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     produto_id INT,
