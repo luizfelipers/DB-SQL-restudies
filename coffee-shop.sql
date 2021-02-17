@@ -1,9 +1,11 @@
 SHOW DATABASES;
 
+--creating a coffee shop database
 CREATE DATABASE coffee_store;
 
 USE coffee_store;
 
+--creting the table for products
 CREATE TABLE produtos (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(30),
@@ -11,7 +13,7 @@ CREATE TABLE produtos (
     );
     
     SHOW TABLES;
-    
+--creating tables for clients
 CREATE TABLE clientes (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(30),
