@@ -60,3 +60,7 @@ SET SQL_SAFE_UPDATES = 0;
 -- updating the coffee origin of items that have values 'India' to 'Chininha'
 UPDATE products SET coffee_origin = 'Chininha' WHERE coffee_origin='India';
 SELECT * FROM products; -- seeing the result
+
+-- testing the update method to a an item that has the 'Americano' name
+UPDATE products SET price = 3.25, coffee_origin='PQP' WHERE name='Americano';
+SELECT * FROM products;
