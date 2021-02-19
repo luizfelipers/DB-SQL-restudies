@@ -48,3 +48,15 @@ INSERT INTO products (name, price, coffee_origin) VALUES ('Caputinho', 9.99, 'Co
 SHOW TABLES;
 SELECT * FROM products;
 INSERT INTO products (name, price, coffee_origin) VALUES ('Latte', 3.50, 'Indonesia'), ('Americano', 3.00, 'Brazil'), ('Flat White', 3.50, 'Indonesia'), ('Filtrado', 3.00, 'India');
+
+
+SELECT * FROM products;
+
+-- updating values that match a Primary Key
+UPDATE products SET coffee_origin = 'Chininha' WHERE id = 7;
+
+--Setting the safe updates to false, so we're able to update other datas that are not Primary Keys
+SET SQL_SAFE_UPDATES = 0;
+-- updating the coffee origin of items that have values 'India' to 'Chininha'
+UPDATE products SET coffee_origin = 'Chininha' WHERE coffee_origin='India';
+SELECT * FROM products; -- seeing the result
