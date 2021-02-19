@@ -33,3 +33,18 @@ CREATE TABLE pedidos (
 );
 
 SHOW TABLES;
+
+DESCRIBE products;
+SELECT * FROM products;
+
+-- inserting some coffee data into the Products table
+INSERT INTO products(name, price, coffee_origin)
+VALUES ('Pelé Espresso', 9.50, 'Brazil' );
+
+INSERT INTO products (name, price, coffee_origin) VALUES ('Starfake', 8.50, 'USA'), ('Nespressinho', 8.99, 'Brazil'), ('Cafézinho Pilão', 7.50, 'Brazil');
+
+INSERT INTO products (name, price, coffee_origin) VALUES ('Caputinho', 9.99, 'Costa Rica');
+
+SHOW TABLES;
+SELECT * FROM products;
+INSERT INTO products (name, price, coffee_origin) VALUES ('Latte', 3.50, 'Indonesia'), ('Americano', 3.00, 'Brazil'), ('Flat White', 3.50, 'Indonesia'), ('Filtrado', 3.00, 'India');
