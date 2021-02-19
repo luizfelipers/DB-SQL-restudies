@@ -64,3 +64,12 @@ SELECT * FROM products; -- seeing the result
 -- testing the update method to a an item that has the 'Americano' name
 UPDATE products SET price = 3.25, coffee_origin='PQP' WHERE name='Americano';
 SELECT * FROM products;
+
+
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+-- populating the customers table
+DESCRIBE customers;
+INSERT INTO customers (first_name, last_name, gender, phone_number) VALUES ('Luiz', 'Silveira', 'M', 456787898), ('Felipinho', 'Bonitinho', 'M', 56746757), ('Claudia', 'Silva', 'F', 5789045), ('Omar', 'Silveira', 'M', 456789765), ('Aninha', 'Silveira', 'F',45787895), ('Luiz', 'Rosa', 'M', 67889945);
+
