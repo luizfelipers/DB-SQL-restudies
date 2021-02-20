@@ -118,5 +118,5 @@ SELECT * FROM customers WHERE last_name NOT IN ('Silveira','Rosa','Armstrong');
 
 -- retorna todos os registros da tabela customers onde os dados contidos na coluna last_name começam com uma letra entre A e L.
 SELECT * FROM customers WHERE last_name BETWEEN 'A' AND 'L';
-
+-- retorna os dados da tabela orders, dos customers_id (chave estrangeira) estão entre 2 e 15
 SELECT product_id, customer_id, order_time FROM orders WHERE customer_id BETWEEN 2 AND 15;
