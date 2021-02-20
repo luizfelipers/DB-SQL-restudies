@@ -110,3 +110,8 @@ SELECT * FROM customers;
 SELECT * FROM customers WHERE phone_number IS NULL;
 -- returns all registers that their phone_number column value IS NOT NULL
 SELECT * FROM customers WHERE phone_number IS NOT NULL;
+
+-- returns all registers from the customers table that contains the passed values on the last_name column
+SELECT * FROM customers WHERE last_name IN('Silveira', 'Rosa', 'Armstrong','Bluth');
+-- returns all registers from the customers table that DON'T contains the passed values on the last_name column
+SELECT * FROM customers WHERE last_name NOT IN ('Silveira','Rosa','Armstrong');
