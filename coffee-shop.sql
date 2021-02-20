@@ -125,3 +125,8 @@ SELECT product_id, customer_id, order_time FROM orders WHERE customer_id BETWEEN
 SELECT * FROM customers WHERE last_name LIKE 'W%';
 -- retorna todos os registros da tabela customers, do DB coffee_store, em que os registros na coluna 'last_name' possuam a letra o.
 SELECT * FROM customers WHERE last_name LIKE '%o%';
+
+-- retorna todos os registros da tabela customers, do DB coffee_store, em que os registros na coluna 'first_name' sigam a estrutura (_letra_),
+-- sendo que os underscores representam qualquer caractere, porém, a palavra precisa possuir apenas 3 caracteres, sendo que a letra do meio é a letra definida pelo dba
+SELECT * FROM customers WHERE first_name LIKE '_o_';
+
