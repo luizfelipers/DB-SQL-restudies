@@ -115,3 +115,8 @@ SELECT * FROM customers WHERE phone_number IS NOT NULL;
 SELECT * FROM customers WHERE last_name IN('Silveira', 'Rosa', 'Armstrong','Bluth');
 -- returns all registers from the customers table that DON'T contains the passed values on the last_name column
 SELECT * FROM customers WHERE last_name NOT IN ('Silveira','Rosa','Armstrong');
+
+-- retorna todos os registros da tabela customers onde os dados contidos na coluna last_name começam com uma letra entre A e L.
+SELECT * FROM customers WHERE last_name BETWEEN 'A' AND 'L';
+
+SELECT product_id, customer_id, order_time FROM orders WHERE customer_id BETWEEN 2 AND 15;
