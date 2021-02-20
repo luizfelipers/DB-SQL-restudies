@@ -120,3 +120,8 @@ SELECT * FROM customers WHERE last_name NOT IN ('Silveira','Rosa','Armstrong');
 SELECT * FROM customers WHERE last_name BETWEEN 'A' AND 'L';
 -- retorna os dados da tabela orders, dos customers_id (chave estrangeira) estão entre 2 e 15
 SELECT product_id, customer_id, order_time FROM orders WHERE customer_id BETWEEN 2 AND 15;
+
+-- retorna todos os registros da tabela customers, do DB coffee_store, em que os registros na coluna last_name comecem com W e possuam qualquer número de caracteres.
+SELECT * FROM customers WHERE last_name LIKE 'W%';
+-- retorna todos os registros da tabela customers, do DB coffee_store, em que os registros na coluna 'last_name' possuam a letra o.
+SELECT * FROM customers WHERE last_name LIKE '%o%';
