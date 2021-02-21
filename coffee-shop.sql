@@ -130,3 +130,15 @@ SELECT * FROM customers WHERE last_name LIKE '%o%';
 -- sendo que os underscores representam qualquer caractere, porém, a palavra precisa possuir apenas 3 caracteres, sendo que a letra do meio é a letra definida pelo dba
 SELECT * FROM customers WHERE first_name LIKE '_o_';
 
+-- retorna todos os registros da tabela products, onde os dados na coluna price comecem com 3 e contenham quaisquer caracteres depois
+SELECT * FROM products WHERE price LIKE '3%';
+
+-- retorna todos os registros da tabela products, onde os dados retornam ordenados de forma crescente pelos valores contidos na coluna price
+SELECT * FROM products ORDER BY price ASC;
+-- retorna todos os registros da tabela products, onde os dados são ordenados de forma decrescente pelos valores da coluna price
+SELECT * FROM products ORDER BY price DESC;
+
+-- retorna os registros da tabela 'customers', ordenando os registros de 'last_name' alfabeticamente
+SELECT * FROM customers ORDER BY last_name ASC; -- valores null são os primeiros a aparecerem
+-- retorna os registros da tabela 'customers', ordenando os registros de 'last_name' de forma decrescente ao alfabeto
+SELECT * FROM customers ORDER BY last_name DESC;
