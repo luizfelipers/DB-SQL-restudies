@@ -171,3 +171,7 @@ SELECT p.name, o.order_time FROM orders o INNER JOIN products p ON o.product_id 
 -- juntando multiplas tabelas
 
 SELECT products.name, products.price, customers.first_name, customers.last_name, orders.order_time FROM products JOIN orders ON products.id = orders.product_id JOIN customers ON customers.id = orders.customer_id;
+
+-- juntando multiplas tabelas e ordenando pela data da transação
+
+SELECT products.name, products.price, customers.first_name, customers.last_name, orders.order_time FROM products JOIN orders ON products.id = orders.product_id JOIN customers ON customers.id = orders.customer_id ORDER BY orders.order_time;
