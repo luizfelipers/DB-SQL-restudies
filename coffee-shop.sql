@@ -142,3 +142,24 @@ SELECT * FROM products ORDER BY price DESC;
 SELECT * FROM customers ORDER BY last_name ASC; -- valores null são os primeiros a aparecerem
 -- retorna os registros da tabela 'customers', ordenando os registros de 'last_name' de forma decrescente ao alfabeto
 SELECT * FROM customers ORDER BY last_name DESC;
+-- retorna todas as origens distintas de café
+SELECT DISTINCT coffee_origin FROM products;
+
+-- teste do Limit statement, que limita o número de resultados aos 5 primeiros registros retornados pela query
+SELECT * FROM products LIMIT 5;
+
+-- retorna os 5 primeiros registros, com um deslocamento de 5 registros antes, e ordenados via ordem alfabética em relação ao last_name
+SELECT * FROM customers ORDER BY last_name LIMIT 5 OFFSET 5;
+
+-- JOINS
+
+-- inner join
+
+SELECT * FROM products;
+DESCRIBE orders;
+SELECT * FROM orders;
+-- o comando acima retorna todos os dados da tabela Orders, mas Product_Id não é uma informação que revela muita coisa,
+-- e para isso, é útil juntar a tabela orders com products, para revelar o significado de product_id
+SELECT * FROM orders INNER JOIN products ON orders.product_id = products.id;
+-- realiza a mesma inner join acima, porém, só retorna os dados de products.name e orders.order_time
+SELECT products.name, orders.order_time FROM orders INNER JOIN products ON orders.product_id = products.id;
