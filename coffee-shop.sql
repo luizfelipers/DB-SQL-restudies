@@ -175,3 +175,16 @@ SELECT products.name, products.price, customers.first_name, customers.last_name,
 SELECT products.name, products.price, customers.first_name, customers.last_name, orders.order_time FROM products JOIN orders ON products.id = orders.product_id JOIN customers ON customers.id = orders.customer_id ORDER BY orders.order_time;
 
 -- joins exercises
+-- exercise 1
+-- select the order id and customers phone number for all orders of product id = 4
+SELECT orders.id, customers.phone_number FROM orders INNER JOIN products ON orders.product_id = products.id JOIN customers ON orders.customer_id = customers.id WHERE orders.product_id = 4;
+
+-- exercise 2
+SELECT * FROM products;
+
+-- exercise 3
+-- select the product name, price and order time for all orders from females in January 2017 
+DESCRIBE customers;
+SELECT * FROM orders;
+
+SELECT products.name, products.price, orders.order_time, customers.gender FROM orders INNER JOIN products ON orders.product_id = products.id INNER JOIN customers ON customer_id = customers.id WHERE customers.gender='F' AND orders.order_time LIKE '2017-01-%'; 
