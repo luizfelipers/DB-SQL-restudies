@@ -161,5 +161,9 @@ SELECT * FROM orders;
 -- o comando acima retorna todos os dados da tabela Orders, mas Product_Id não é uma informação que revela muita coisa,
 -- e para isso, é útil juntar a tabela orders com products, para revelar o significado de product_id
 SELECT * FROM orders INNER JOIN products ON orders.product_id = products.id;
+
 -- realiza a mesma inner join acima, porém, só retorna os dados de products.name e orders.order_time
 SELECT products.name, orders.order_time FROM orders INNER JOIN products ON orders.product_id = products.id;
+
+-- realiza a mesma query acima, mas reescrevendo as tabelas e colunas de uma forma simplificada
+SELECT p.name, o.order_time FROM orders o INNER JOIN products p ON o.product_id = p.id;
