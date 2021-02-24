@@ -1,6 +1,8 @@
+-- Criação do DB para CINEMA! Contém tabelas: Filmes, Clientes, Screenings, Salas, Assentos, Assentos Reservados e Reservas 
 CREATE DATABASE cinemaDb;
 USE cinemaDb;
 
+-- tabela de filmes
 CREATE TABLE films(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(45) NOT NULL,
