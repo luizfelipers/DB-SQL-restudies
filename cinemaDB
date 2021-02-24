@@ -20,8 +20,23 @@ SHOW TABLES;
 DESCRIBE customers;
 SELECT * FROM customers;
 
+-- tabela para salas de cinema
 CREATE TABLE rooms(
  id INT PRIMARY KEY AUTO_INCREMENT,
  name VARCHAR(45) UNIQUE,
  number_seats INT NOT NULL
+);
+SHOW TABLES;
+DESCRIBE rooms;
+SELECT * FROM rooms;
+
+-- tabela de screenings/ telões
+CREATE TABLE screenings(
+id INT AUTO_INCREMENT PRIMARY KEY,
+film_id INT,
+room_id INT,
+start_time DATETIME,
+-- chaves estrangeiras 
+FOREIGN KEY (film_id) REFERENCES films(id),
+FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
