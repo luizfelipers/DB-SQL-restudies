@@ -8,3 +8,14 @@ CREATE TABLE films(
     name VARCHAR(45) NOT NULL UNIQUE,
     length_min INT NOT NULL
 );
+-- Tabela customers / clientes
+CREATE TABLE customers(
+id INT PRIMARY KEY AUTO_INCREMENT,
+first_name VARCHAR(45) NOT NULL,
+last_name VARCHAR(45) NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+
+SHOW TABLES;
+DESCRIBE customers;
+SELECT * FROM customers;
