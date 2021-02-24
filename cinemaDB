@@ -19,3 +19,9 @@ email VARCHAR(50) NOT NULL
 SHOW TABLES;
 DESCRIBE customers;
 SELECT * FROM customers;
+
+CREATE TABLE rooms(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(45) UNIQUE,
+ number_seats INT NOT NULL
+);
