@@ -40,3 +40,13 @@ start_time DATETIME NOT NULL,
 FOREIGN KEY (film_id) REFERENCES films(id),
 FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
+
+-- tabela seats/ assentos da sala de cinema
+CREATE TABLE seats(
+id INT PRIMARY KEY AUTO_INCREMENT,
+tier CHAR(1) NOT NULL,
+number INT NOT NULL,
+room_id INT NOT NULL,
+FOREIGN KEY (room_id) REFERENCES rooms(id)
+
+);
