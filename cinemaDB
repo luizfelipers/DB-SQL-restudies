@@ -1,3 +1,11 @@
+-- Esse arquivo único consiste da criação e manutenção de Banco de Dados Relacional para um sistema de reservas de Cinema. 
+-- Os tópicos abordados envolvem: criação de tabelas com chaves primária e estrangeiras, inserção de dados e alteração de colunas da tabela
+-- e Aggregate Functions, como: SUM, COUNT, AVERAGE, MIN/MAX e GROUP BY.
+
+
+--	INICIALIZAÇÃO
+
+
 -- Criação do DB para CINEMA! Contém tabelas: Filmes, Clientes, Screenings, Salas, Assentos, Assentos Reservados e Reservas 
 CREATE DATABASE cinemaDb;
 USE cinemaDb;
@@ -370,3 +378,19 @@ SELECT COUNT(*) FROM customers WHERE first_name = 'Smith';
 SELECT COUNT(*) FROM customers WHERE last_name = 'Smith';
 -- checagem da consulta de algumas linhas acima, conferindo o número de ocorrências de registros NULOS na coluna First_name da tabela de clientes
 SELECT COUNT(*) FROM customers WHERE first_name IS NULL;
+
+-- sum 
+-- soma todos os registros de uma coluna específica
+SELECT * FROM rooms;
+-- soma os valores dos registros da colona number_seats, de todas as salas de cinema. Retorna o número total de assentos do cinema
+SELECT SUM(number_seats) FROM rooms; -- precisa ser um valor numérico
+
+-- min e max
+
+-- retorna o menor valor da duração de um filme
+SELECT MIN(length_min) FROM films;
+-- retorna o maior valor da duração de um filme
+SELECT MAX(length_min) FROM films;
+-- retorna o menor e o maior valor, em uma única consulta
+SELECT MIN(length_min), MAX(length_min) FROM films;
+
