@@ -363,4 +363,4 @@ SELECT * FROM screenings;
 SELECT * FROM customers;
 -- count function (conta o numero de registros)
 SELECT COUNT(first_name) FROM customers; -- conta o numero de registros da coluna First_Name, que no caso, pode ter valores nulos
-SELECT COUNT(last_name) FROM customers; -- conta o numero de registros de Last_name, que não aceita valores nulos 6 valores a mais
+SELECT COUNT(last_name) FROM customers; -- conta o numero de registros de Last_name, que não aceita valores nulos. Por não aceitar valores nulos, possui 6 valores a mais
