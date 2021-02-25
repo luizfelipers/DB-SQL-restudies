@@ -394,3 +394,27 @@ SELECT MAX(length_min) FROM films;
 -- retorna o menor e o maior valor, em uma única consulta
 SELECT MIN(length_min), MAX(length_min) FROM films;
 
+-- average
+-- duração média dos filmes em cartaz no cinema
+SELECT AVG(length_min) FROM films;
+-- retorna a duração média dos filmes que são mais longos que 2h de duração
+SELECT AVG(length_min) FROM films WHERE length_min > 120;
+-- número médio de assentos por sala no cinema
+SELECT AVG(number_seats) FROM rooms;
+SELECT AVG() FROM ;
+
+-- 1. how many bookings the customer id 10 made in october 2017
+
+SELECT COUNT(*) FROM bookings WHERE customer_id = 10;
+
+-- 2. count the number of screenings for blade runner
+SELECT * FROM films;
+-- blade runner id is number 1
+SELECT COUNT(*) FROM screenings WHERE film_id = 1;
+-- JOINING TABLES
+SELECT COUNT(*) FROM screenings JOIN films ON screenings.film_id = films.id AND films.name='Blade Runner 2049';
+
+-- 3. count the number of distincts customers that made bookings in october 2017
+SELECT COUNT(DISTINCT(customer_id)) FROM bookings;
+
+SELECT COUNT(customer_id) FROM bookings;
