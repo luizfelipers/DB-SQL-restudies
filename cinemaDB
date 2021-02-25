@@ -364,3 +364,9 @@ SELECT * FROM customers;
 -- count function (conta o numero de registros)
 SELECT COUNT(first_name) FROM customers; -- conta o numero de registros da coluna First_Name, que no caso, pode ter valores nulos
 SELECT COUNT(last_name) FROM customers; -- conta o numero de registros de Last_name, que não aceita valores nulos. Por não aceitar valores nulos, possui 6 valores a mais
+
+-- checa o número de ocorrências do nome Smith, nos Nomes e Sobrenomes
+SELECT COUNT(*) FROM customers WHERE first_name = 'Smith';
+SELECT COUNT(*) FROM customers WHERE last_name = 'Smith';
+-- checagem da consulta de algumas linhas acima, conferindo o número de ocorrências de registros NULOS na coluna First_name da tabela de clientes
+SELECT COUNT(*) FROM customers WHERE first_name IS NULL;
