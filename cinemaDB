@@ -358,3 +358,9 @@ SELECT * FROM reserved_seat;
 SELECT * FROM rooms;
 SELECT * FROM seats;
 SELECT * FROM screenings;
+
+-- aggregate funcions
+SELECT * FROM customers;
+-- count function (conta o numero de registros)
+SELECT COUNT(first_name) FROM customers; -- conta o numero de registros da coluna First_Name, que no caso, pode ter valores nulos
+SELECT COUNT(last_name) FROM customers; -- conta o numero de registros de Last_name, que não aceita valores nulos
