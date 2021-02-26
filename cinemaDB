@@ -418,3 +418,19 @@ SELECT COUNT(*) FROM screenings JOIN films ON screenings.film_id = films.id AND 
 SELECT COUNT(DISTINCT(customer_id)) FROM bookings;
 
 SELECT COUNT(customer_id) FROM bookings;
+
+SELECT * FROM bookings;
+-- retorna os resultados agrupados pelos IDs dos clientes distintos. Cada linha representa a reserva de um cliente em uma sala específica, e a coluna COUNT conta quantas vezes essa reserva ocorreu
+SELECT customer_id,screening_id,COUNT(*) FROM bookings GROUP BY customer_id,screening_id ORDER BY customer_id;
+DESCRIBE bookings;
+
+-- query complexa onde é retornada a relação de reservas de cada filme, com dados do comprador,
+-- quantos ingressos comprou para aquela sessão e todos os resultados são ordenados pela data de início da sessão
+
+SELECT films.name, screenings.start_time, customers.first_name, customers.last_name, COUNT(bookings.id) FROM films
+JOIN screenings ON films.id = film_id
+JOIN bookings ON screenings.id = bookings.screening_id
+JOIN customers ON bookings.customer_id = customers.id
+GROUP BY films.name, customers.last_name, customers.first_name, screenings.start_time
+ORDER BY screenings.start_time;
+
