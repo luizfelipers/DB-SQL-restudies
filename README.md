@@ -4,6 +4,8 @@ The intention of this study repo, is to reinforce knowledge in Relational Databa
 
 During this studies, MySQL was the chosen DBMS, so the code syntax found here is all related to MySQL.
 
+You'll find several repositories, using SQL commands and principles like: Creating/Deleting Tables; Updating tables; Inserting data into tables; Primary and Foreign Key uses; Types of Joins uses; use of booleans and conditionals; Ordering values; Normalization (1NF, 2NF, 3NF); Aggregate functions and Subqueries.
+
 
 ![image](https://user-images.githubusercontent.com/26651389/108449281-fa237300-7241-11eb-8cb6-854f23e25e49.png)
 
