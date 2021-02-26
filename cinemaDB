@@ -1,6 +1,6 @@
 -- Esse arquivo único consiste da criação e manutenção de Banco de Dados Relacional para um sistema de reservas de Cinema. 
--- Os tópicos abordados envolvem: criação de tabelas com chaves primária e estrangeiras, inserção de dados e alteração de colunas da tabela
--- e Aggregate Functions, como: SUM, COUNT, AVERAGE, MIN/MAX e GROUP BY.
+-- Os tópicos abordados envolvem: criação de tabelas com chaves primária e estrangeiras, inserção de dados e alteração de colunas da tabela,
+-- Aggregate Functions, como: SUM, COUNT, AVERAGE, MIN/MAX e GROUP BY, e Subqueries (Non-correlated e Correlated)
 
 
 --	INICIALIZAÇÃO
@@ -433,4 +433,21 @@ JOIN bookings ON screenings.id = bookings.screening_id
 JOIN customers ON bookings.customer_id = customers.id
 GROUP BY films.name, customers.last_name, customers.first_name, screenings.start_time
 ORDER BY screenings.start_time;
+
+
+-- SUBQUERIES
+
+-- consultas que são feitas dentro de outra consulta maior.
+-- Ou seja, o resultado da consulta mais interno é usado como parâmetro para a consulta mais externa
+-- 2 TIPOS: NON-CORRELATED E CORRELATED
+
+-- Non-Correlated: onde a query mais interna não depende/ não está 
+-- correlacionada com a sua query mais externa(pai)
+SELECT id, start_time FROM screenings WHERE film_id IN (
+-- subquery aqui 
+SELECT id FROM films WHERE length_min > 120
+);
+
+-- Correlated: onde a inner query usa dados da outer query
+SELECT screening_id, customer_id, (SELECT COUNT(seat_id) FROM reserved_seat WHERE booking_id = bookings.id) FROM BOOKINGS;
 
