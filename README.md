@@ -1,6 +1,6 @@
 # DB-SQL
 
-The intention of this study repo, is to reinforce knowledge in Relational Databases, using SQL, aiming towards learning PostgresSQL, once it's going to be the main DBMS used on TT003/ST060 - Advanced Topics in Databases discipline @UNICAMP. It will be my final discipline in college, so I want to be prepared to face all challenges that are about to come, even though they are hard or not. The study roadmap that's being used is: DBR using SQL w/ MySQL, DBOR using PostGresSQL, and finally, MongoDB as a NoSQL solution. My final goal is to apply the Database knowledge acquired in API building and Data Analysis/AI tasks
+The intention of this study repo, is to reinforce knowledge in Relational Databases, using SQL, aiming towards learning PostgresSQL, once it's going to be the main DBMS used on TT003/ST060 - Advanced Topics in Databases discipline @UNICAMP. It will be my final discipline in college, so I want to be prepared to face all challenges that are about to come, even though they are hard or not. The study roadmap that's being used is: DBR using SQL w/ MySQL, DBOR using PostGresSQL, and finally, MongoDB as a NoSQL solution. My final goal is to apply the Database knowledge acquired in this study effort to API building and Data Analysis/AI tasks
 
 During this studies, MySQL was the chosen DBMS, so the code syntax found here is all related to MySQL.
 
