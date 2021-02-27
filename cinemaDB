@@ -507,4 +507,10 @@ SELECT name FROM films;
 -- retorna substrings compostas do nome de filmes, sendo que os caracteres retornados são do 1o até o 3o
 SELECT SUBSTRING(name, 1, 3) AS short_name FROM films;
 
+-- UPPER/ LOWER
+-- UPPER RETORNA O RESULTADO DA QUERY FORMATADA EM LETRAS MAIÚSCULAS
+-- lower retorna o resultado da query formatada em letras minúsculas
+SELECT UPPER(name) FROM films;
+SELECT LOWER(name) FROM films;
+
 
