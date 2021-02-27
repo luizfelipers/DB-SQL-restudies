@@ -451,3 +451,12 @@ SELECT id FROM films WHERE length_min > 120
 -- Correlated: onde a inner query usa dados da outer query
 SELECT screening_id, customer_id, (SELECT COUNT(seat_id) FROM reserved_seat WHERE booking_id = bookings.id) FROM BOOKINGS;
 
+SHOW TABLES;
+
+SELECT * FROM reserved_seat;
+SELECT AVG(no_seats) FROM 
+(SELECT booking_id, COUNT(seat_id) AS no_seats FROM reserved_seat GROUP BY booking_id) b;
+-- subqueries criam o que são chamadas de 'tabelas derivadas'
+SELECT MAX(no_seats) FROM 
+(SELECT booking_id, COUNT(seat_id) AS no_seats FROM reserved_seat GROUP BY booking_id) b;
+
