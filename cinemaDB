@@ -498,3 +498,13 @@ SELECT CONCAT(first_name," " ,last_name) AS full_name FROM customers;
 -- ADICIONANDO ESPAÇO para separar os nomes. Concatena o primeiro nome + espaço + sobrenome + espaço + email
 SELECT CONCAT(first_name," " ,last_name," ", email) AS full_name FROM customers;
 
+-- SUBSTRINGS
+-- Manipulando os caracteres da palavra "Exemplo"
+-- retorna a substring da palavra exemplo, a partir do 3o caractere
+SELECT SUBSTRING("Exemplo",3) AS Sub;
+
+SELECT name FROM films;
+-- retorna substrings compostas do nome de filmes, sendo que os caracteres retornados são do 1o até o 3o
+SELECT SUBSTRING(name, 1, 3) AS short_name FROM films;
+
+
