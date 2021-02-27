@@ -499,9 +499,17 @@ SELECT CONCAT(first_name," " ,last_name) AS full_name FROM customers;
 SELECT CONCAT(first_name," " ,last_name," ", email) AS full_name FROM customers;
 
 -- SUBSTRINGS
--- Manipulando os caracteres da palavra "Exemplo"
--- retorna a substring da palavra exemplo, a partir do 3o caractere
-SELECT SUBSTRING("Exemplo",3) AS Sub;
+-- Manipulando os caracteres da palavra "EXEMPLO"
+-- retorna a consulta de uma substirng a partir do 1o caracter e tenha 3 caracteres de tamanho => EXE
+SELECT SUBSTRING("EXEMPLO", 1, 3) AS Sub;
+-- retorna a consulta de uma substring que contém as letras a partir do 3o caractere => EMPLO
+SELECT SUBSTRING("EXEMPLO", 3) AS Sub;
+-- retorna a substring a partir do 5o caractere, com 2 caracteres de tamanho
+SELECT SUBSTRING("EXEMPLO", 5,2) AS Sub;
+-- retorna a substring a partir do 2o caractere, com 2 caracteres de tamanho
+SELECT SUBSTRING("EXEMPLO", 2,2) AS Sub;
+-- retorna a substring correspondente as últimas duas letras de cada palavra
+SELECT SUBSTRING("EXEMPLO", -2,2) AS Sub;
 
 SELECT name FROM films;
 -- retorna substrings compostas do nome de filmes, sendo que os caracteres retornados são do 1o até o 3o
